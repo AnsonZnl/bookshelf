@@ -1,0 +1,11 @@
+/* pages/me/me.wxss */
+.avatar{
+  display: block;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin: 20rpx auto;
+}
+.name{
+  text-align: center;
+}

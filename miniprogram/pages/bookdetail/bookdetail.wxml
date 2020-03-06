@@ -1,0 +1,29 @@
+<view class="img-box">
+  <image src="{{detail.images}}" class="img-bg"></image>
+  <image src="{{detail.images}}" mode="aspectFit" class="img"></image>
+</view>
+<view class="container">
+  <view>
+    <view>{{detail.publisher}}</view>
+    <view>{{detail.price}}</view>
+  </view>
+  <view>
+    <view class="rate">{{detail.rate}}</view>
+  </view>
+  <view>
+    <view wx:for="{{detail.tag}}" class="tag-item">{{item.title}}</view>
+  </view>
+  <view class="sum mb20">
+    {{detail.summary}}
+  </view>
+  <view class="comment">
+    <view wx:for="{{detail.comments}}" class="mb20">
+      <view class="com-top mb20">
+        <view>{{item.author}}</view>
+        <view >{{item.rating}}</view>
+      </view>
+      <view class="mb20 com-content">{{item.content}}</view>
+      <view class="deta">{{item.date}}</view>
+    </view>
+  </view>
+</view>

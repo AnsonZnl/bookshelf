@@ -1,0 +1,72 @@
+/* pages/bookdetail/bookdetail.wxss */
+
+.img-box {
+  height: 300rpx;
+  position: relative;
+  padding: 50rpx 0;
+  overflow: hidden;
+}
+
+.img-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+  -webkit-filter: blur(15rpx);
+  -moz-filter: blur(15rpx);
+  -o-filter: blur(15rpx);
+  -ms-filter: blur(15rpx);
+  filter: blur(15rpx);
+}
+
+.img {
+  position: absolute;
+  display: block;
+  width: 200rpx;
+  height: 300rpx;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.rate {
+  color: red;
+}
+
+.tag-item {
+  display: inline-block;
+  margin: 10rpx;
+  padding: 6rpx 10rpx;
+  border-radius: 4rpx;
+  border: solid red 2rpx;
+  color: red;
+  font-size: 20rpx;
+}
+
+.sum {
+  text-indent: 50rpx;
+  color: #333;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.com-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.com-content {
+  text-indent: 20rpx;
+  color: #333;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+.deta{
+ font-size: 20rpx;
+  color: #999;
+}

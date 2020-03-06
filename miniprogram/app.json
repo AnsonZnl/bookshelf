@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bookdetail/bookdetail",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "书架",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "书架"
+    },{
+      "pagePath": "pages/me/me",
+      "text": "我的"
+    }]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

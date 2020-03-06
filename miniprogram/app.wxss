@@ -1,0 +1,7 @@
+/**app.wxss**/
+.container {
+  padding: 0 20rpx;
+} 
+.mb20{
+  margin-bottom: 20rpx;
+}

@@ -1,0 +1,10 @@
+<view class="container">
+  <view wx:if="{{userInfo.openid}}">
+    <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+    <view class="name mb20">{{userInfo.nickName}}</view>
+    <button type="primary" bindtap="scanCode">扫码</button>
+  </view>
+  <view wx:else>
+    <button type="primary" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">登录</button>
+  </view>
+</view>
