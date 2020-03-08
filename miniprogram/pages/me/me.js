@@ -1,19 +1,20 @@
 // pages/me/me.js
-
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    userInfo: {},
+    myBooks:[]
   },
   onGetUserInfo(e) {
     console.log(e.detail.userInfo);
     let userInfo = e.detail.userInfo;
     wx.cloud.callFunction({
       name: 'login',
-    }).then(res=>{
+    }).then(res => {
       console.log(res.result);
       userInfo.openid = res.result.openid;
       this.setData({
@@ -23,28 +24,51 @@ Page({
         key: 'userInfo',
         data: userInfo
       })
-    }).catch(err=>{
+      this.getMyBooks(userInfo.openid)
+    }).catch(err => {
       console.log(err)
     })
   },
   // 扫码
-  scanCode(){
+  scanCode() {
+    let that = this;
+    wx.showLoading({
+      title: '添加中..',
+    })
     wx.scanCode({
       success(res) {
         let isbn = res.result;
         console.log(res);
         wx.cloud.callFunction({
           name: 'getBookInfo',
-          data:{
+          data: {
             isbn
           }
-        }).then(res=>{
+        }).then(res => {
           console.log(res)
-        }).catch(err=>{
+          wx.hideLoading()
+          wx.showModal({
+            title: '添加成功',
+            content: `成功将"${res.result.title}"添加到书架`,
+            showCancel: false
+          })
+          let arr = that.data.myBooks;
+          arr.push(res.result);
+          that.setData({
+            myBooks: arr
+          })
+        }).catch(err => {
           console.log(err)
+          wx.hideLoading()
+          wx.showModal({
+            title: '添加失败',
+            content: err.errMsg,
+            showCancel: false
+          })
         })
       },
-      fail(err){
+      fail(err) {
+        wx.hideLoading()
         console.log(err)
       }
     })
@@ -53,10 +77,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let userInfo = wx.getStorageSync('userInfo');
+    let userInfo = wx.getStorageSync('userInfo') || {};
     console.log(userInfo)
     this.setData({
-      userInfo: userInfo || {}
+      userInfo: userInfo
+    })
+    if (userInfo.openid) {
+      this.getMyBooks(userInfo.openid)
+    }
+  },
+  getMyBooks(openid){
+    db.collection('doubanbooks').where({
+      _openid: openid
+    }).get().then(res=>{
+      console.log(res);
+      this.setData({
+        myBooks: res.data
+      })
+    }).catch(err=>{
+      console.log(err)
     })
   },
 

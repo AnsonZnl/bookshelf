@@ -2,7 +2,10 @@
   <view wx:if="{{userInfo.openid}}">
     <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
     <view class="name mb20">{{userInfo.nickName}}</view>
-    <button type="primary" bindtap="scanCode">扫码</button>
+    <button type="primary" bindtap="scanCode">扫码添加图书</button>
+    <view>
+      <view wx:for="{{myBooks}}" wx:key="index">{{item.title}}</view>
+    </view>
   </view>
   <view wx:else>
     <button type="primary" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">登录</button>

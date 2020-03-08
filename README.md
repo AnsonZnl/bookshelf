@@ -3,8 +3,9 @@
 ## 注册微信小程序
 - 在 [微信公众平台](https://mp.weixin.qq.com/) 注册一个小程序，得到小程序的appid。
 - 下载[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+- 参考文档：[微信开发文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
 - 打开微信开发者工具，创建小程序，输入appid，选择使用云开发，创建小程序。
-- 删除demo中的代码，创建一个云环境。
+- 删除demo中的代码，创建一个云环境并使用。
 
 ## 我的页面
 ### 登录
@@ -20,8 +21,8 @@
 
 ## 书架页
 ### 书架列表
-- 获取云函数的书架列表
-- 下拉刷新
+- 获取云函数的书架列表，使用field限制返回字段。
+- 下拉刷新，在当前页面的json文件中配置`"enablePullDownRefresh": true`,并在js中触发`onPullDownRefresh`事件
 - 滚动加载
 
 ## 图书详情

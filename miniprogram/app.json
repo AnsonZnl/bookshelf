@@ -5,8 +5,8 @@
     "pages/me/me"
   ],
   "window": {
-    "backgroundColor": "#000000",
-    "backgroundTextStyle": "light",
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#FFFFFF",
     "navigationBarTitleText": "书架",
     "navigationBarTextStyle": "black"
