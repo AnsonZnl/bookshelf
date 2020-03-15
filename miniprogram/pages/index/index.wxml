@@ -1,5 +1,5 @@
 <view class="container">
-  <view class="book-item" wx:for="{{booksList}}" wx:key="index" id='{{item._id}}' bindtap="toDetail">
+  <view class="book-item" wx:for="{{books}}" wx:key="index" id='{{item._id}}' bindtap="toDetail">
     <image src="{{item.images}}" mode="aspectFit" class="book-img"></image>
     <view class="des">
       <view class="book-tit mb20">{{item.title}}</view>
