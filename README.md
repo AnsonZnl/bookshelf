@@ -1,5 +1,13 @@
 # 书架小程序
 
+- 预览
+
+  ![微信小程序](https://github.com/AnsonZnl/PictureBed/blob/master/fe/bookshelf.jpg?raw=true)
+
+  
+
+  
+
 ## 注册微信小程序
 - 在 [微信公众平台](https://mp.weixin.qq.com/) 注册一个小程序，得到小程序的appid。
 - 下载[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
