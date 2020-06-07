@@ -4,14 +4,29 @@
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wxe7e4294a73b3842c",
 	"projectname": "bookshelf",
-	"libVersion": "2.8.1",
+	"libVersion": "2.11.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
@@ -57,6 +72,19 @@
 					"name": "bookdetail",
 					"pathName": "pages/bookdetail/bookdetail",
 					"query": "id=fdb91dc3-5fd8-4f4c-8e7a-3b657f803d70",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "account-books",
+					"pathName": "pages/account-books/account-books",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "detailed",
+					"pathName": "pages/detailed/detailed",
 					"scene": null
 				}
 			]

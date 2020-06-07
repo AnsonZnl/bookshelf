@@ -1,0 +1,33 @@
+<view class="title">勤记账 存钱快</view>
+<form bindsubmit="submit">
+	<view class="section" hover-class="section-hover">
+		<view class="section-title">服务</view>
+		<picker class="section-com" name="state" bindchange="stateChange" value="{{state[stateIndex]}}" range="{{state}}">
+			{{state[stateIndex]}}
+		</picker>
+	</view>
+	<view class="section">
+		<view class="section-title">类型</view>
+		<picker class="section-com" name="type" bindchange="typeChange" value="{{type[typeIndex]}}" range="{{type}}">
+			{{type[typeIndex]}}
+		</picker>
+	</view>
+	<view class="section">
+		<view class="section-title">日期</view>
+		<picker class="section-com" name="date" bindchange="dateChange" mode="date" value="{{date}}">
+			{{date}}
+		</picker>
+	</view>
+	<view class="section">
+		<view class="section-title">费用</view>
+		<input model:value="{{money}}" value="{{money}}" maxlength="5" name="money" type="digit" placeholder="请输入费用"></input>
+	</view>
+	<view class="section">
+		<view class="section-title">备注</view>
+		<input model:value="{{remark}}" value="{{remark}}" maxlength="5" name="remark" placeholder="请输入备注"></input>
+	</view>
+
+	<button type="primary" form-type="submit">记一笔</button>
+</form>
+
+<navigator hover-class="none" url="/pages/detailed/detailed">历史账单</navigator>

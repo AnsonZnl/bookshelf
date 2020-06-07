@@ -1,0 +1,51 @@
+.title {
+  font-size: 38rpx;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20rpx;
+  margin-bottom: 50px;
+}
+
+form {
+  display: block;
+  width: 500rpx;
+  margin: auto;
+}
+
+.section {
+  width: 500rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 10rpx 10rpx;
+  border-bottom: solid #ddd 2rpx;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-around;
+}
+/* .section-hover{
+  background: #ddd;
+  border-radius: 10rpx;
+} */
+.section-title {
+  width: 200rpx;
+  text-align: left;
+}
+
+.section-com {
+  width: 300rpx;
+  text-align: left;
+  padding-right: 10rpx;
+}
+input{
+  padding-left: 14rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+button{
+  margin-top: 30px;
+}
+navigator{
+  margin-top: 30px;
+  padding:20rpx;
+  text-align: center;
+}

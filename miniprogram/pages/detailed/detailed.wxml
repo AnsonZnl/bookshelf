@@ -1,0 +1,30 @@
+<view class="head">
+  <picker mode="date" bindchange="dateChange" fields="month" start="2020-01-01" end="2022-01-01" value="{{date}}">{{date}}</picker>
+</view>
+<view class="total">
+<view>收入：{{income}}元</view>
+<view>支出：{{expenditure}}元</view>
+</view>
+<view class="list thead">
+  <view>日期</view>
+  <view>状态</view>
+  <view>类型</view>
+  <view>费用</view>
+  <view>备注</view>
+</view>
+<view wx:if="{{myAccountBooks.length == 0}}" class="center">
+无记录
+</view>
+<view else>
+  <view wx:for="{{myAccountBooks}}" wx:key="index" class="list tbody">
+    <view>{{item.day}}</view>
+    <view>{{item.state}}</view>
+    <view>{{item.type}}</view>
+    <view>{{item.money}}</view>
+    <view>{{item.remark}}</view>
+  </view>
+</view>
+
+
+<!-- 
+  <canvas canvas-id="pieCanvas" class="canvas" style="height:300px;width:100%;" bindtouchstart="touchHandler"></canvas> -->

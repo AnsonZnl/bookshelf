@@ -83,7 +83,8 @@ Page({
       userInfo: userInfo
     })
     if (userInfo.openid) {
-      this.getMyBooks(userInfo.openid)
+      this.getMyBooks(userInfo.openid) // 得到图书列表
+      this.getAccountBooks(userInfo.openid)
     }
   },
   getMyBooks(openid){
@@ -98,7 +99,9 @@ Page({
       console.log(err)
     })
   },
-
+  getAccountBooks(openid){
+    
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

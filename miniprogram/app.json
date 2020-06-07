@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/bookdetail/bookdetail",
+    "pages/account-books/account-books",
+    "pages/detailed/detailed",
     "pages/me/me"
   ],
   "window": {
@@ -15,7 +17,10 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "书架"
-    },{
+    }, {
+      "pagePath": "pages/account-books/account-books",
+      "text": "账本"
+    }, {
       "pagePath": "pages/me/me",
       "text": "我的"
     }]
